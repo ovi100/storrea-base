@@ -1,0 +1,43 @@
+$spacingValue: 0px,5px,10px,20px,30px;
+
+@each $mv in $spacingValue{
+    .mt-#{$mv} {
+        margin-top: $mv;
+    }
+    .mr-#{$mv} {
+        margin-right: $mv;
+    }
+    .mb-#{$mv} {
+        margin-bottom: $mv;
+    }
+    .ml-#{$mv} {
+        margin-left: $mv;
+    }
+    .mx-#{$mv} {
+        margin: 0px $mv;
+    }
+    .my-#{$mv} {
+        margin: $mv 0px;
+    }
+}
+
+@each $pv in $spacingValue{
+    .pt-#{$pv} {
+        padding-top: $pv;
+    }
+    .pr-#{$pv} {
+        padding-right: $pv;
+    }
+    .pb-#{$pv} {
+        padding-bottom: $pv;
+    }
+    .pl-#{$pv} {
+        padding-left: $pv;
+    }
+    .px-#{$pv} {
+        padding: 0px $pv;
+    }
+    .py-#{$pv} {
+        padding: $pv 0px;
+    }
+}
