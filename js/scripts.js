@@ -19,14 +19,18 @@ $(document).ready(function(){
         $(this).find(".grand-child-content").stop().slideUp(300);
     });
 
+    $(".search-icon").click(function(event){
+        event.preventDefault();
+        $(".searchbox-holder").fadeToggle("slow");
+        $(".search-input").focus();
+    });
+
 	$(".search-input").focus(function (){
         $(".search-suggestions").fadeIn("slow");
-        $(".search-box").find(".input-group").css("border-color","#000");
     });
 
     $(".search-input").blur(function (){
         $(".search-suggestions").fadeOut("slow");
-        $(".search-box").find(".input-group").css("border-color","#ddd");
     });
 
   	var menuHeight = $(".menu1").height();
@@ -34,7 +38,6 @@ $(document).ready(function(){
     $(".sidenav-overlay").css("top",menuHeight+'px');
 
     $("#sidebar-toggle").click(function(){
-    	preventDefault();
     	$("#sidenav").toggleClass("show-sidenav");
     });
     $("#sidenav-overlay").click(function(event){

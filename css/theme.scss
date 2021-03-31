@@ -196,6 +196,7 @@ body{
             }
         }
         .header-icon{
+            position: relative;
             flex: 0.5;
             @include justify-content(flex-end);
             @include transition(all,0.3s,ease);
@@ -214,10 +215,42 @@ body{
                     font-weight: 500;
                 }
             }
+
+            .searchbox-holder{
+                position: absolute;
+                top: 49px;
+                right: -15px;
+                left: 45%;
+                display: none;
+                margin-left: 0;
+                z-index: 200;
+
+                div{
+                    margin-left: 0;
+                }
+
+                .searchbox{
+                    .form-control{
+                        height: 50px;
+                        background: $bcolor;
+                        border: 1px solid $bcolor;
+                        @include border-radius(0);
+                        @include box-shadow(none);
+                    }
+
+                    button{
+                        height: 50px;
+                        background: $bcolor;
+                        border: 1px solid $bcolor;
+                        @include border-radius(0);
+                        @include box-shadow(none);
+                        color: $wcolor;
+                    }
+                }
+            }
         }
         .sidenav-toggle{
             display: none;
-            margin-top: 15px;
             span{
                 display: block;
                 width: 30px;
@@ -460,7 +493,8 @@ body{
                 position: absolute;
                 top: 10px;
                 color: $theme-color;
-                font-size: 16px;
+                font-size: 14px;
+                letter-spacing: 1px;
                 text-transform: uppercase;
             }
 
@@ -509,6 +543,7 @@ body{
                 color: $text-color;
                 font-size: 16px;
                 font-weight: 500;
+                letter-spacing: 2px;
             }
         }
         .ratting{
@@ -531,13 +566,15 @@ body{
 
                 a{
                     color: $gcolor;
+                    font-size: 13px;
                     font-weight: 600;
+                    letter-spacing: 2px;
                     text-transform: uppercase;
                 }
             }
             .price{
                 position: absolute;
-                right: 32%;
+                right: 32.5%;
                 @include opacity(1);
                 visibility: visible;
                 @include transition(all,0.7s,ease);
@@ -545,7 +582,7 @@ body{
                     color: $gcolor;
                     font-size: 14px;
                     font-weight: 600;
-                    margin-right: 10px;
+                    margin-right: 5px;
                 }
                 s{
                     color: $gcolor;
@@ -558,7 +595,7 @@ body{
     &:hover{
         .photo{
             .quickvew-wishlist{
-                bottom: 0;
+                bottom: -2px;
             }
         }
         .content{
