@@ -28,28 +28,7 @@ $desktop: '(min-width: 1201px) and (max-width: 1755px)';
     .content-wrapper{
         width: 100%;
     }
-    .product-box{
-        .content{
-            .addtoCart-price{
-                .price{
-                    right: 21%;
-
-                    s{
-                        display: none;
-                    }
-                }
-            }
-        }
-        &:hover,&:focus{
-            .content{
-                .addtoCart-price{
-                    .addtoCart {
-                        left: 10%;
-                    }
-                }
-            }
-        }
-    }
+    
     .signup-login-container{
         width: 100%;
         border: 0;
@@ -331,9 +310,57 @@ $desktop: '(min-width: 1201px) and (max-width: 1755px)';
     body{
         overflow-x: hidden;
     }
+
+    .content-wrapper{
+        width: 90%;
+    }
     
     // Layout Style
-    
+    .header{
+        .header-content{
+            padding: 15px 0;
+            .content-wrapper{
+                @include justify-content(space-between);
+            }
+            .menu{
+                flex: none;
+            }
+            .logo{
+                flex: none;
+            }
+            .header-icon{
+                position: unset;
+                flex: none;
+
+                div{
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+
+                .searchbox-holder{
+                    top: 55px;
+                    left: 5%;
+                    margin: 0;
+                }
+            }
+            .sidenav-toggle{
+                display: block;
+            }
+        }
+    }
+    .newsletter{
+        .newsletter-form{
+            width: 100%;
+        }
+    }
+    .copyright{
+        display: block;
+        p{
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+
     // Index Page
     
     // Catalog Page
@@ -457,6 +484,18 @@ $desktop: '(min-width: 1201px) and (max-width: 1755px)';
 @include respond-to($laptop){
     // Common Style
     
+    // Layout Page
+    .header{
+        .header-content{
+            .menu{
+                .menu-items{
+                    li{
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
     
     // Index Page
     
